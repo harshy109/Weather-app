@@ -1,0 +1,20 @@
+body{
+    background-color: #111531e7;
+    color: white;
+}
+.mainDiv{
+    background-color: #111531e7;
+}
+
+@media screen and (max-width:760px){
+    .screenDiv{
+        width: 60%;
+    }
+
+}
+@media screen and (max-width:540px){
+    .form{
+        flex-direction: column;
+    }
+
+}
