@@ -27,11 +27,11 @@ function App() {
 
   return (
     <>
-      <div className='screenDiv m-auto mt-30 border-2 p-6 border-gray-400 rounded-3xl w-[40%] h-[60%]'>
-      <h1 className='text-center text-5xl font-extrabold my-10'>Weather App</h1>
+      <div className='screenDiv m-auto mt-20 border-2 p-6 border-gray-400 rounded-3xl w-[40%] h-[60%] shadow-lg'>
+      <h1 className='text-center text-5xl font-extrabold my-7'>Weather App</h1>
 
-      <div className='m-auto grid'>
-          <form onSubmit={getData} className='flex m-auto mt-8 gap-2'>
+      <div className='bundle m-auto grid w-[75%]'>
+          <form onSubmit={getData} className='flex m-auto mt-8 gap-2 w-[100%]'>
             <input
             className='bg-gray-200 p-2 pl-7 w-[85%] rounded-2xl border-2 text-black' 
             type="text" 
@@ -41,7 +41,7 @@ function App() {
             <button type='submit' className='w-[25%] bg-amber-500 p-2 rounded-2xl'>Submit</button>
           </form>
 
-          <div className='mainDiv text-gray-300 text-center m-auto mt-5 rounded-3xl p-5 w-[60%]'>
+          <div className='mainDiv text-gray-100 text-center m-auto mt-5 rounded-3xl p-5 w-[100%]'>
 
           {(weatherDetails!==undefined)
           ?
