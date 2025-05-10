@@ -9,16 +9,20 @@ function App() {
 
   let getData = (event)=>{
     console.log(city)
-    fetch(`http://api.weatherapi.com/v1/current.json?key=79f7a637758c41f396d150217250405&q=${city}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=79f7a637758c41f396d150217250405&q=${city}`)
     .then((res)=>res.json())
     .then((finalRes)=>{
       console.log(finalRes);
-      if(finalRes.code==1006){
+      if(finalRes.code==1006 || finalRes.error ){
         setWeatherDetails(undefined)
       }
       else{
         setWeatherDetails(finalRes);
       }
+    })
+    .catch(error => {
+      console.error("API Error:", error);
+      setWeatherDetails(undefined);
     })
     
     event.preventDefault();
